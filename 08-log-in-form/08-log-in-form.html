@@ -18,9 +18,32 @@
         <h2>Log in</h2>
         <p>Please log in before accessing our website</p>
       </header>
-
-      <!-- Add your log in form here -->
-
+      <form action="/log-in" method="POST">
+        <p>
+          <label id="uname">
+            <b>Username</b>
+          </label>
+        </p>
+        <p>
+          <input type="text" placeholder="Enter your email address" name="uname" required>
+        </p>
+        <p>
+          <label id="psw">
+            <b>password</b>
+          </label>
+        </p>
+        <p>
+          <input type="password" placeholder="Enter password" name="psw" required>
+        </p>
+        <p>
+          <input type="button" name="submit" value="Log in">
+        </p>
+        <p>
+          <span class="psw">Forgot
+            <a href="#">password</a>
+          </span>
+        </p>
+      </form>
     </main>
   </body>
 </html>
