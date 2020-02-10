@@ -21,7 +21,7 @@ Your blog should have the following:
 
 - An index page, `index.html` in the root of the repo.
   - This file will act as your homepage. So make it cheery, inviting, and have it list links to all the posts you write.
-  - This file will also introduce you. Maybe it's a good idea to tell everyone your pen-name. 🤓
+  - This file will also introduce y ou. Maybe it's a good idea to tell everyone your pen-name. 🤓
 - An HTML file per blog post.
   - What you call its filename is up to you, but I'd suggest using a proper date in the filename, or organising these files in folders that have the date. That way you can easily set the order of the posts by date.
   - You'll need at least a good title per blog post, and a few paragraphs, and/or images to go with that title.
