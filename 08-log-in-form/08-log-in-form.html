@@ -20,28 +20,18 @@
       </header>
       <form action="/log-in" method="POST">
         <p>
-          <label id="uname">
-            <b>Username</b>
+          <label for="username_email">E-mail address<br>
+          <input type="email" id="username_email" name="username" required>
+        </label>
+        </p>
+        <p>
+          <label for="password_field">
+            Password<br>
+          <input type="password" id="password_field" name="password" required>
           </label>
         </p>
         <p>
-          <input type="text" placeholder="Enter your email address" name="uname" required>
-        </p>
-        <p>
-          <label id="psw">
-            <b>password</b>
-          </label>
-        </p>
-        <p>
-          <input type="password" placeholder="Enter password" name="psw" required>
-        </p>
-        <p>
-          <input type="button" name="submit" value="Log in">
-        </p>
-        <p>
-          <span class="psw">Forgot
-            <a href="#">password</a>
-          </span>
+          <button type="submit">Log in</button>
         </p>
       </form>
     </main>
