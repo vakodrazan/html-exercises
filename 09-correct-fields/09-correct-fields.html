@@ -32,26 +32,30 @@
         <fieldset>
           <legend>Simple text: Nickname</legend>
           <!-- The server is expecting plain text here with the `name` of `nickname`. Linebreaks aren't allowed. -->
+        <input type="text" name="nickname" required>
         </fieldset>
         <fieldset>
           <legend>Multi-line Text: Biography</legend>
           <!-- The server is expecting paragraphs of text here to act as the `biography` field. Linebreaks need to be saved. -->
+          <input type="text" name="biography" required>
         </fieldset>
         <fieldset>
           <legend>Mobile phone number</legend>
           <!-- The server is expecting the user's `mobile_phone` here. -->
+          <input type="tel" name="mobile_phone" required>
         </fieldset>
         <fieldset>
           <legend>Website</legend>
           <!-- The server is expecting the user's `website` address here. -->
+          <input type="url" name="website" required>
         </fieldset>
         <fieldset>
           <legend>Date of birth</legend>
-          <!-- The server is expecting the user's `date_of_birth` here. -->
+          <input type="date" name="date_of_birth" required>
         </fieldset>
         <fieldset>
           <legend>Age</legend>
-          <!-- The server is expecting the user's `age` in years here. -->
+          <input type="number" name="age" required>
         </fieldset>
         <div>
           <button type="submit" name="form" value="text">Send</button>
@@ -64,16 +68,44 @@
         </header>
         <fieldset>
           <legend>True / False, with a default choice</legend>
-          <!-- The server is expecting a choice between `true` and `false` only. Set it to `true` by default. -->
+          <ul>
+            <li>
+              <label>
+                <input type="radio" name="choice_radio" value="true" required checked>
+                True
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="choice_radio" value="false" required>
+                False
+              </label>
+            </li>
+          </ul>
         </fieldset>
         <fieldset>
           <legend>Confirm</legend>
-          <!-- The server is expecting a specific name/value pair of `confirm=true` that the user can confirm, or nothing in its place. -->
-          <input type="checkbox" name="confirm" value="true">
+          <label>
+            <input type="checkbox" name="confirm" value="true" required>
+            Confirm
+          </label>
         </fieldset>
         <fieldset>
           <legend>Yes or No</legend>
-          <!-- The server is expecting a value of `yes`, or `no` for the `agree` field. -->
+          <ul>
+            <li>
+              <label>
+                <input type="radio" name="agree" value="yes" required>
+                Yes
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="agree" value="no" required>
+                No
+              </label>
+            </li>
+          </ul>
         </fieldset>
         <div>
           <button type="submit" name="form" value="booleans">Send</button>
@@ -86,97 +118,167 @@
         </header>
         <fieldset>
           <legend>Small list of values</legend>
-          <!--
-            The server is expecting one of the following values for `fruit`:
-
-              - `apples`: Apples
-              - `bananas`: Bananas
-              - `grapes`: Grapes
-              - `plums`: Plums
-          -->
+          <ul>
+            <li>
+              <label>
+                <input type="radio" name="fruit" value="apples" required>
+                Apples
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="fruit" value="bananas" required>
+                Bananas
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="fruit" value="grapes" required>
+                Grapes
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="fruit" value="plums" required>
+                Plums
+              </label>
+            </li>
+          </ul>
         </fieldset>
         <fieldset>
           <legend>Large list of values</legend>
-          <!--
-            The server is expecting one of the following values for `birds`:
-
-              - `duck`: Ducks
-              - `eagle`: Eagles
-              - `heron`: Herons
-              - `gull`: Gulls
-              - `pigeon`: Pigeons
-              - `raven`: Ravens
-              - `robin`: Robins
-              - `swallow`: Swallows
-          -->
+          <label>
+            <select name="birds">
+              <option value="duck">Ducks</option>
+              <option value="eagle">Eagles</option>
+              <option value="heron">Herons</option>
+              <option value="gull">Gulls</option>
+              <option value="pigeon">Pigeons</option>
+              <option value="raven">Ravens</option>
+              <option value="robin">Robins</option>
+              <option value="swallow">Swallows</option>
+            </select>
+          </label>
         </fieldset>
         <div>
           <button type="submit" name="form" value="single">Send</button>
         </div>
       </form>
-
       <form action="#form_multiple" method="GET" id="form_multiple">
         <header>
           <h2>Multiple choices from a set of options</h2>
         </header>
         <fieldset>
           <legend>Small list of values</legend>
-          <!--
-            The server is expecting one or more of the following values for `fruit`:
-
-              - `apples`: Apples
-              - `bananas`: Bananas
-              - `grapes`: Grapes
-              - `plums`: Plums
-          -->
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" name="fruits" value="apples">
+                Apples
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="fruits" value="bananas">
+                Bananas
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="fruits" value="grapes">
+                Grapes
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="fruits" value="plums">
+                Plums
+              </label>
+            </li>
+          </ul>
         </fieldset>
         <fieldset>
           <legend>Large list of values</legend>
-          <!--
-            The server is expecting one or more of the following values for `birds`:
-
-              - `duck`: Ducks
-              - `eagle`: Eagles
-              - `heron`: Herons
-              - `gull`: Gulls
-              - `pigeon`: Pigeons
-              - `raven`: Ravens
-              - `robin`: Robins
-              - `swallow`: Swallows
-          -->
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" name="birds" value="duck">
+                Ducks
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="birds" value="eagle">
+                Eagles
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="birds" value="heron">
+                Herons
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="birds" value="gull">
+                Gulls
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="birds" value="pigeon">
+                Pigeons
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="birds" value="raven">
+                Ravens
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="birds" value="robin">
+                Robins
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="birds" value="swallow">
+                Swallows
+              </label>
+            </li>
+          </ul>
         </fieldset>
         <div>
           <button type="submit" name="form" value="multiple">Send</button>
         </div>
       </form>
-
       <form action="#form_other" method="GET" id="form_other" enctype="multipart/form-data">
         <header>
           <h2>Other form fields</h2>
         </header>
         <fieldset>
           <legend>Hidden</legend>
-          <!--
-            The server is expecting a hidden `signed=true` pair here.
-          -->
+          <input type="hidden" name="signed=true">
         </fieldset>
         <fieldset>
           <legend>File(s)</legend>
-          <!--
-            The server is expecting at least one file here, with the name of `photos`.
-          -->
+          <label>
+            <input type="file" name="photos" >
+          </label>
         </fieldset>
         <fieldset>
           <legend>Range</legend>
-          <!--
-            The server is expecting at a numerical value for `bearing` between 0 and 359
-          -->
+          <label>
+            <input type="range" name="bearing" min="0" max="359">
+          </label>
         </fieldset>
         <fieldset>
           <legend>Colour</legend>
-          <!--
-            The server is expecting at a colour value for `background_colour`
-          -->
+          <label>
+            <input type="color" name="background_color">
+          </label>
         </fieldset>
         <div>
           <button type="submit" name="form" value="other">Send</button>
