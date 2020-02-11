@@ -31,22 +31,18 @@
         </header>
         <fieldset>
           <legend>Simple text: Nickname</legend>
-          <!-- The server is expecting plain text here with the `name` of `nickname`. Linebreaks aren't allowed. -->
         <input type="text" name="nickname" required>
         </fieldset>
         <fieldset>
           <legend>Multi-line Text: Biography</legend>
-          <!-- The server is expecting paragraphs of text here to act as the `biography` field. Linebreaks need to be saved. -->
           <input type="text" name="biography" required>
         </fieldset>
         <fieldset>
           <legend>Mobile phone number</legend>
-          <!-- The server is expecting the user's `mobile_phone` here. -->
           <input type="tel" name="mobile_phone" required>
         </fieldset>
         <fieldset>
           <legend>Website</legend>
-          <!-- The server is expecting the user's `website` address here. -->
           <input type="url" name="website" required>
         </fieldset>
         <fieldset>
@@ -199,73 +195,35 @@
         </fieldset>
         <fieldset>
           <legend>Large list of values</legend>
-          <ul>
-            <li>
-              <label>
-                <input type="checkbox" name="birds" value="duck">
-                Ducks
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox" name="birds" value="eagle">
-                Eagles
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox" name="birds" value="heron">
-                Herons
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox" name="birds" value="gull">
-                Gulls
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox" name="birds" value="pigeon">
-                Pigeons
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox" name="birds" value="raven">
-                Ravens
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox" name="birds" value="robin">
-                Robins
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox" name="birds" value="swallow">
-                Swallows
-              </label>
-            </li>
-          </ul>
+          <label>
+            <select name="birds" multiple>
+              <option value="ducks">Ducks</option>
+              <option value="eagle">Eagles</option>
+              <option value="heron">Herons</option>
+              <option value="gull">Gulls</option>
+              <option value="pigeon">Pigeons</option>
+              <option value="raven">Ravens</option>
+              <option value="robin">Robins</option>
+              <option value="swallow">Swallows</option>
+            </select>
+          </label>
         </fieldset>
         <div>
           <button type="submit" name="form" value="multiple">Send</button>
         </div>
       </form>
-      <form action="#form_other" method="GET" id="form_other" enctype="multipart/form-data">
+      <form action="#form_other" method="POST" id="form_other" enctype="multipart/form-data">
         <header>
           <h2>Other form fields</h2>
         </header>
         <fieldset>
           <legend>Hidden</legend>
-          <input type="hidden" name="signed=true">
+          <input type="hidden" name="signed" value="true">
         </fieldset>
         <fieldset>
           <legend>File(s)</legend>
           <label>
-            <input type="file" name="photos" >
+            <input type="file" name="photos">
           </label>
         </fieldset>
         <fieldset>
