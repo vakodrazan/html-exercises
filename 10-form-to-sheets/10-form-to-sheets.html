@@ -8,14 +8,59 @@
     </title>
   </head>
   <body>
-
     <form action="https://script.google.com/macros/s/AKfycbx_k22UijbL8nV_HE_eFCqonZ5LtCmyZqLd_wvG3_lWoAdLGWI/exec" method="POST">
-
       <!--
         The google sheet can be found at: https://docs.google.com/spreadsheets/d/1Vnkb5rE1kgXFMt2So3RwfvfLwayVtATt1o9NM-ry9UI/edit?usp=sharing
         Create a field for each cell in the Google Sheet.
       -->
-
+      <ul>
+        <li>
+          <label>Contributor<br>
+            <input type="text" name="contributor" value="Noeline">
+          </label>
+        </li>
+        <li>
+          <label>Artist name<br>
+            <input type="text" name="artist_name" value="Ariane">
+          </label>
+        </li>
+        <li>
+          <label>Artist_id<br>
+            <input type="text" name="artist_id" value="ariane">
+          </label>
+        </li>
+        <li>
+          <label>Genre<br>
+            <select name="genre">
+              <option value="basesa">Basesa</option>
+              <option value="beko">Beko</option>
+              <option value="kawitry">Kawitry</option>
+              <option value="kilalaky">Kilalaky</option>
+              <option value="mangaliba">Mangaliba</option>
+              <option value="pop">Pop</option>
+              <option value="rock">Rock</option>
+              <option value="salegy">Salegy</option>
+              <option value="slow">Slow</option>
+              <option value="tsapiky">Tsapiky</option>
+            </select>
+          </label>
+        </li>
+        <li>
+          <label>Photo URL<br>
+            <input type="url" name="photo_url">
+          </label>
+        </li>
+        <li>
+          <label>biography<br>
+            <textarea rows="3" cols="30" name="biography"></textarea>
+          </label>
+        </li>
+        <li>
+          <label>website<br>
+            <input type="url" name="website">
+          </label>
+        </li>
+      </ul>
       <button type="submit">Save</button>
     </form>
   </body>
