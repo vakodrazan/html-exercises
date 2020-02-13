@@ -17,25 +17,25 @@
     <main>
       <!-- In this example, the 'Wait!' needs stressing when vocalised -->
       <p>
-        <strong>"Wait!"</strong> shouted Jesse.
+        <q><strong>Wait!</strong></q> shouted Jesse.
       </p>
       <hr>
       <!-- It's a good idea to tell a computer how to read a datetime: -->
       <p>
-        The time is now <time datetime="14:00">2pm</time>, on <time datetime="2020-12-02"> Wednesay the 12th of February, 2020.</time>
+        The time is now 2pm, on <time datetime="2020-02-12T14:00:00+03"> Wednesay the 12th of February, 2020.</time>
       </p>
       <hr>
       <!-- What do 'H' and 'O' mean here? -->
       <p>
-        The elements <abbr>H</abbr> and <abbr>O</abbr>, bond as H<sub>2</sub>0, or water (as it is colloquaially known).
+        The elements <abbr title="hydogen">Hydrogen</abbr> and <abbr title="oxygen">Oxygen</abbr>, bond as H<sub>2</sub>0, or <em>water<em> (as it is colloquaially known).
         (I don't understand what I should do here?)
       </p>
       <hr>
       <!-- Sometimes we just want to make something look a certain way -->
       <p>
         Editor's Notes:<br>
-        <span>Please use <kbd>CTRL</kbd>+<kbd>B</kbd> to bold this word: <b>Critical</b><br>
-        Please use <kbd>CTRL</kbd>+<kbd>I</kbd> to italicise this word: <i>Doubtful</i><br>
+        <span>Please use <kbd>CTRL</kbd> + <kbd>B</kbd> to bold this word: <b>Critical</b><br>
+        Please use <kbd>CTRL</kbd> + <kbd>I</kbd> to italicise this word: <i>Doubtful</i><br>
         Please underline this word: <u>Thinking</u><br>
         Please put a line through this word: <s>Assuming</s><br>
         Please show that the word 'slow' was removed, and 'quick' added in its place in the following sentence:
@@ -44,17 +44,19 @@
       <hr>
       <!-- We can do the same with samples of code, even maintaining the whitespace: -->
       <p>
-        "Woah! <small>'that'</small> was unexpected!" exclaimed Keith.<br>
+        <q><em>Woah!</em> <code>that</code> was unexpected!</q> exclaimed Keith.<br>
         Curiously, Jesse looked at the output on Keith's screen and it said:<br>
-          Unexpected value for argument 'that'
-            - in function clickHandler, <kbd>line 12</kbd>
-            - called from function anonymous, <span>line 34</span>
+<pre>
+  Unexpected value for argument <code>'that'</code>
+  -in function <code>clickHandler</code>, line 12
+  -called from function anonymous, line 34
           (I don't understand what I should do here?)
+        </pre>
       </p>
       <hr>
       <!-- We can add helpful markup to highlight words -->
       <p>
-        Your search term: 'Helicopter' was found in the following documents:
+        Your search term: <mark>Helicopter</mark> was found in the following documents:
       </p>
       <ul>
         <li>
