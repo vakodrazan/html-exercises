@@ -13,54 +13,58 @@
         The google sheet can be found at: https://docs.google.com/spreadsheets/d/1Vnkb5rE1kgXFMt2So3RwfvfLwayVtATt1o9NM-ry9UI/edit?usp=sharing
         Create a field for each cell in the Google Sheet.
       -->
-      <ul>
-        <li>
-          <label>Contributor<br>
-            <input type="text" name="contributor" value="Noeline">
-          </label>
-        </li>
-        <li>
-          <label>Artist name<br>
-            <input type="text" name="artist_name" value="Ariane">
-          </label>
-        </li>
-        <li>
-          <label>Artist_id<br>
-            <input type="text" name="artist_id" value="ariane">
-          </label>
-        </li>
-        <li>
-          <label>Genre<br>
-            <select name="genre">
+        <input type="hidden" name="contributor" value="Noeline">
+      <p>
+        <label>
+          Artist's name<br>
+          <input type="text" name="artist_name" required>
+        </label>
+      </p>
+      <p>
+        <label>
+          Artist's ID<br>
+          <input type="text" name="artist_id" pattern="[a-z]{3,}" title="Three or more characters"><br>
+        </label>
+      </p>
+      <p>
+        <label>
+          Artist's genre<br>
+          <select name="genre">
+            <optgroup label="malagasy genre">
               <option value="basesa">Basesa</option>
               <option value="beko">Beko</option>
               <option value="kawitry">Kawitry</option>
               <option value="kilalaky">Kilalaky</option>
               <option value="mangaliba">Mangaliba</option>
+              <option value="tsapiky">Tsapiky</option>
+              <option value="salegy">Salegy</option>
+            </optgroup>
+            <optgroup label="International genre">
               <option value="pop">Pop</option>
               <option value="rock">Rock</option>
-              <option value="salegy">Salegy</option>
               <option value="slow">Slow</option>
-              <option value="tsapiky">Tsapiky</option>
-            </select>
-          </label>
-        </li>
-        <li>
-          <label>Photo URL<br>
-            <input type="url" name="photo_url">
-          </label>
-        </li>
-        <li>
-          <label>biography<br>
-            <textarea rows="3" cols="30" name="biography"></textarea>
-          </label>
-        </li>
-        <li>
-          <label>website<br>
-            <input type="url" name="website">
-          </label>
-        </li>
-      </ul>
+            </optgroup>
+          </select>
+        </label>
+      </p>
+      <p>
+        <label>
+          Photo URL<br>
+          <input type="url" name="photo_url">
+        </label>
+      </p>
+      <p>
+        <label>
+          biography<br>
+          <textarea rows="3" cols="30" name="biography"></textarea>
+        </label>
+      </p>
+      <p>
+        <label>
+          website<br>
+          <input type="url" name="website">
+        </label>
+      </p>
       <button type="submit">Save</button>
     </form>
   </body>
