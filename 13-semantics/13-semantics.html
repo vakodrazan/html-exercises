@@ -24,6 +24,22 @@
             - "About us" links to "/about"
             - "Contact us" links to "/contact"
         -->
+        <nav>
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/services">Our services</a>
+            </li>
+            <li>
+              <a href="/about">About us</a>
+            </li>
+            <li>
+              <a href="/contact">Contact us</a>
+            </li>
+          </ul>
+        </nav>
       </section>
 
       <section>
@@ -41,6 +57,65 @@
               - Prefer to not disclose, "na"
             - Photo, optional, as "profile_photo". The user can upload a photo if they want. We only accept PNGs, JPGs, and WebP formats.
         -->
+        <form
+          action="/profile/sve"
+          method="POST"
+          enctype="multipart/form-data">
+          <p>
+            <label>
+              First name<br>
+              <input type="text" name="profile_first_name" required>
+            </label>
+          </p>
+          <p>
+            <label>
+              Family name<br>
+              <input type="text" name="profile_family_name" required>
+            </label>
+          </p>
+          <p>
+            <label>
+              E-mail<br>
+              <input type="email" name="username" required>
+            </label>
+          </p>
+          <p>
+            <label>
+              Phone<br>
+              <input type="tel" name="phone" value="phone">
+            </label>
+          </p>
+          <p>
+            Gender<br>
+          </p>
+          <ul>
+            <li>
+              <label>
+                <input type="radio" name="gender" value="m">
+                Male
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="gender" value="f">
+                Female
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="gender" value="na">
+                Prefer to not disclose
+              </label>
+            </li>
+          </ul>
+            <label>
+              Photo (optional)
+              <input type="file" name="profile_photo" accept="image/png, image/jpeg, image/webp">
+            </label>
+          <div>
+            <button type="submit" name="form" value="other">Send</button>
+          </div>
+        </form>
       </section>
 
       <section>
@@ -54,6 +129,20 @@
 
           "If you weren't my mother, this would be illegal," you'll say, seething as you unwind the power cord and plug it into the wall outlet.
         -->
+        <blockquote>
+          <p>
+            <q>The only reason you had me was so you could get a maid you wouldn't have to pay,</q> you'll say bitterly, <i>dragging the vacuum cleaner out of the closet</i>.
+          </p>
+          <p>
+            <q><strong>That's right!</strong></q> I'll say. <q>Thirteen years ago I knew the carpets would need vacuuming around now, and having a baby seemed to be the cheapest and easiest way to get the job done. Now kindly get on with it.</q>
+          </p>
+          <p>
+            <q>If you weren't my mother, this would be illegal,</q> <code>you'll say</code>, <var>seething as you unwind the power cord and plug it into the wall outlet.</var>
+          </p>
+          <footer>
+            -From Ted Chiang, in <cite>The story of your life</cite>
+          </footer>
+        </blockquote>
       </section>
 
       <section>
@@ -74,8 +163,45 @@
 
           Please provide a summary of the student's information.
         -->
+        <table>
+          <thead>
+            <tr>
+              <th scope="col" id="header_name">
+                Name
+              </th>
+              <th scope="col" id="header_age">
+                Age
+              </th>
+              <th scope="col" id="header_weight">
+                Weight
+              </th>
+              <th scope="col" id="header_height">
+                Height
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th headers="header_name" scope="row" id="row_fred">Fred</th>
+              <td headers="row_fred header_age">23</td>
+              <td headers="row_fred header_weight">74kg</td>
+              <td headers="row_fred header_height">182cm</td>
+            </tr>
+            <tr>
+              <th headers="header_name" scope="row" id="row_anne">Anne</th>
+              <td headers="row_anne header_age">26</td>
+              <td headers="row_anne header_weight">56kg</td>
+              <td headers="row_anne header_height">173cm</td>
+            </tr>
+            <tr>
+              <th headers="header_name" scope="row" id="row_judith">Judith</th>
+              <td headers="row_judith header_age">19</td>
+              <td headers="row_judith header_weight">51kg</td>
+              <td headers="row_judith header_height">168cm</td>
+            </tr>
+          </tbody>
+        </table>
       </section>
-
       <section>
         <h2>Search results</h2>
         <!--
@@ -111,6 +237,9 @@
             Excerpt:
               Develop your critical thinking skills. Boost your ability to solve problems and make the right decisions at work, home and in study.
         -->
+        <a href="search_result.html">
+          Search result
+        </a>
       </section>
       <section>
         <h2>A definition</h2>
@@ -118,9 +247,28 @@
           6. Create the HTML necessary for the image `markup.png` in this folder.
           It is a definition of the word 'Markup'.
         -->
+          <h2>markup</h2>
+          <p>/'mɑːkʌp/</p>
+          <em>noun</em><br>
+          <small>noun: <b>markup</b>;  plural noun: <b>markups</b>; noun: <b>mark-up</b>; plural noun: <b>mark-ups</b></small>
+          <ol>
+            <li>
+              the amount added to the cost price of goods to cover overheads and profit.<br>
+              <q>a markup of 50 per cent</q>
+            </li>
+            <li>
+              the process or result of correcting text in preparation for printing.
+            </li>
+            <li>
+              <mark>
+                COMPUTING<br>
+              </mark>
+                a set of tags assigned to elements of a text to indicate their relation to the rest of the text or dictate how they should be displayed.<br>
+              <q>markup languages</q>
+            </li>
+          </ol>
         <img src="markup.png" alt="There are three definitions for the word 'Markup'">
       </section>
-
     </main>
   </body>
 </html>
