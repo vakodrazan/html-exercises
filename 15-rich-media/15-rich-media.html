@@ -7,6 +7,7 @@
       15: Rich Media
     </title>
     <!-- There's some CSS we need to include here -->
+    <link rel="stylesheet" href="css/rich-media.css">
   </head>
   <body>
     <header>
@@ -20,18 +21,70 @@
           <h2>Audio</h2>
         </header>
         <!-- Add the audio example here -->
+        <figure>
+          <figcaption>
+            Early high wails:
+          </figcaption>
+          <audio controls
+            src="audio/early-high_wails.ogg">
+            Your browser does not support the <code>audio</code> elements.
+          </audio>
+        </figure>
+        <figure>
+          <figcaption>
+            Late high wails long:
+          </figcaption>
+          <audio controls
+            src="audio/late-high_wails-long.ogg">
+            Your browser does not support the <code>audio</code> elements.
+          </audio>
+        </figure>
+        <figure>
+          <figcaption>
+            Late high wails:
+          </figcaption>
+          <audio controls
+            src="audio/late-high_wails.ogg">
+            Your browser does not support the <code>audio</code> elements.
+          </audio>
+        </figure>
+        <figure>
+          <figcaption>
+            Moan:
+          </figcaption>
+          <audio controls
+            src="audio/moan.ogg">
+            Your browser does not support the <code>audio</code> elements.
+          </audio>
+        </figure>
+        <figure>
+          <figcaption>
+            Purr:
+          </figcaption>
+          <audio controls
+            src="audio/purr.ogg">
+            Your browser does not support the <code>audio</code> elements.
+          </audio>
+        </figure>
       </article>
       <article>
         <header>
           <h2>Video</h2>
         </header>
         <!-- Add the video example here -->
+        <video controls>
+          <source src="video/chip.mp4"
+            type="video/mp4">
+            Sorry your browser does not support embedded video
+        </video>
       </article>
       <article>
         <header>
           <h2>Canvas</h2>
         </header>
         <!-- Add the canvas example here -->
+        <canvas id="canvas"></canvas>
+        <script src="js/canvas.js"></script>
       </article>
     </main>
     <!-- For the canvas to work, we'll need the script included here -->
